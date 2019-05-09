@@ -1,0 +1,87 @@
+
+ 
+  <div class="bckcover">
+    <!-- <mat-toolbar style="background:transparent;">
+       
+       
+         <div style="display:flex"> <span><img src="../../../assets/img/logo-sign.png" width="100%"/></span>
+          <div style="    margin-left: 508px;"> <span style="color:white">Not Having Account? </span><button style="background-color: #0097a7;" mat-flat-button>Sign Up</button></div></div>
+      </mat-toolbar> -->
+      <div class="row" style="    display: flex;">
+          <div class="column">
+              <div class="cardleft">
+              <img src="../../../assets/img/logo-sign.png" width="52px"/>
+            </div>
+          </div>
+            <div class="column1">
+                <div class="cardright">
+                <span style="color:white;    font-weight: 400;
+font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Nunito Sans',sans-serif;                ">Not Having Account? </span><button style="background-color: #0097a7;" mat-flat-button>Sign Up</button>
+                </div>
+              </div>
+            </div>
+
+    <!-- <mat-grid-list class="topheader" cols="2" rowHeight="6:1">
+        <mat-grid-tile style="float:left;"> <img src="../../../assets/img/logo-sign.png" width="9%"/></mat-grid-tile>
+        <mat-grid-tile><div class="example-button-row">
+            <span style="color:white">Not Having Account? </span><button style="background-color: #0097a7;" mat-flat-button>Sign Up</button>
+            
+          </div></mat-grid-tile>
+      
+      </mat-grid-list> -->
+      <mat-grid-list class="topheader" cols="2" rowHeight="15:2">
+          <mat-grid-tile style="float:left;"></mat-grid-tile>
+          <mat-grid-tile></mat-grid-tile>
+        
+        </mat-grid-list>
+      <div class="row paddclass" >
+          <div class="column">
+            <div class="card" style="   border-radius: 8px;">
+              <h3 style="    text-align: center;font-family:  'Poppins', sans-serif;">Get Started With Gene</h3>
+              <p style="    text-align: center;font-family: 'Nunito Sans',sans-serif;">The most powerful angular app</p>
+              <form style="padding:13px" [formGroup]="authForm" (ngSubmit)="submitForm()">
+                
+              
+                <div class="container">
+                  <label for="uname"><b>E-Mail</b></label>
+                  <input type="text" placeholder="Enter email" name="email"  formControlName="email">
+                 
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password"  placeholder="Enter Password" name="password"  formControlName="password">
+                  
+                
+                      <p>Forget Password?</p>
+                      <div class="example-button-row" style="text-align:center">
+                        
+                          <button mat-flat-button color="primary" [disabled]="!authForm.valid" type="submit">LOGIN</button>
+                       
+                        </div>
+                
+                </div>
+              
+            
+              </form>
+              <div class="container" style="background-color:#f1f1f1;    text-align: center; margin-top: 11px;">
+                  <p>Or Signing Up</p>
+                  <div class="example-button-row">
+                     <button mat-fab style="background:#1565c0;    margin-right: 10px;    font-size: 21px;">f</button>
+                     <button mat-fab style="background:#e53935;    margin-right: 10px;    font-size: 21px;">G</button>
+                     <button mat-fab style="background:#0097a7;    margin-right: 10px;    font-size: 21px;">t</button>
+                  
+                   </div>
+                 </div>
+            </div>
+          </div>
+        
+          <div class="column1">
+            <div class="card1" style="padding: 1px;    height: 8px;   ">
+                <img src="../../../assets/img/login-slider3.jpg" width="100%" style="    border-radius: 8px;
+                "/>
+            </div>
+          </div>
+          
+        
+        </div>
+    </div>
