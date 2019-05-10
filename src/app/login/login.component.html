@@ -10,15 +10,15 @@
       <div class="row" style="    display: flex;">
           <div class="column">
               <div class="cardleft">
-              <img src="../../../assets/img/logo-sign.png" width="52px"/>
+              <img src="../../../assets/img/logo_sign.png" width="64px"/>
             </div>
           </div>
             <div class="column1">
                 <div class="cardright">
-                <span style="color:white;    font-weight: 400;
+                <!-- <span style="color:white;    font-weight: 400;
 font-size: 1rem;
     line-height: 1.5;
-    font-family: 'Nunito Sans',sans-serif;                ">Not Having Account? </span><button style="background-color: #0097a7;" mat-flat-button>Sign Up</button>
+    font-family: 'Nunito Sans',sans-serif;                ">Not Having Account? </span><button style="background-color: #0097a7;" mat-flat-button>Sign Up</button> -->
                 </div>
               </div>
             </div>
@@ -41,14 +41,18 @@ font-size: 1rem;
             <div class="card" style="   border-radius: 8px;">
               <h3 style="    text-align: center;font-family:  'Poppins', sans-serif;">Get Started With Gene</h3>
               <p style="    text-align: center;font-family: 'Nunito Sans',sans-serif;">The most powerful angular app</p>
-              <form style="padding:13px" [formGroup]="authForm" (ngSubmit)="submitForm()">
+              <div class="segmented-control" >
+               <label (click)="selectSegment('first')"  [ngClass]="{'sc-label' : 1==1,'segmentcolor':firstseg,'unselectseg':secondseg}">Staff </label>
+                <label (click)="selectSegment('second')" [ngClass]="{'sc-label' : 1==1,'segmentcolor':secondseg,'unselectseg':firstseg}" >Admin </label>
+              </div>
+              <form *ngIf="firstseg" style="padding:13px" [formGroup]="authForm" (ngSubmit)="submitForm()">
                 
               
                 <div class="container">
-                  <label for="uname"><b>E-Mail</b></label>
+                  <label for="uname" style="color:#655e5e"><b>E-Mail</b></label>
                   <input type="text" placeholder="Enter email" name="email"  formControlName="email">
-                 
-                  <label for="psw"><b>Password</b></label>
+                  <p class="validation" *ngIf="(authForm.controls['email'].hasError('pattern') ||  authForm.controls.email.errors) && (authForm.controls.email.dirty || authForm.controls.email.touched)">Please enter valid email id.</p>
+                  <label for="psw" style="color:#655e5e"><b>Password</b></label>
                   <input type="password"  placeholder="Enter Password" name="password"  formControlName="password">
                   
                 
@@ -63,7 +67,29 @@ font-size: 1rem;
               
             
               </form>
-              <div class="container" style="background-color:#f1f1f1;    text-align: center; margin-top: 11px;">
+              <form *ngIf="secondseg" style="padding:13px" [formGroup]="authForm" (ngSubmit)="submitForm()">
+                
+              
+                <div class="container">
+                  <label for="uname" style="color:#655e5e"><b>E-Mail</b></label>
+                  <input type="text" placeholder="Enter email" name="email"  formControlName="email">
+                  <p class="validation" *ngIf="(authForm.controls['email'].hasError('pattern') ||  authForm.controls.email.errors) && (authForm.controls.email.dirty || authForm.controls.email.touched)">Please enter valid email id.</p>
+                  <label for="psw" style="color:#655e5e"><b>Password</b></label>
+                  <input type="password"  placeholder="Enter Password" name="password"  formControlName="password">
+                  
+                
+                      <p>Forget Password?</p>
+                      <div class="example-button-row" style="text-align:center">
+                        
+                          <button mat-flat-button color="primary" [disabled]="!authForm.valid" type="submit">LOGIN</button>
+                       
+                        </div>
+                
+                </div>
+              
+            
+              </form>
+              <div class="container" style="background-color:#f1f1f1;    text-align: center; ">
                   <p>Or Signing Up</p>
                   <div class="example-button-row">
                      <button mat-fab style="background:#1565c0;    margin-right: 10px;    font-size: 21px;">f</button>

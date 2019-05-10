@@ -7,13 +7,10 @@ import { LoginComponent } from './login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-import {MatIconModule} from '@angular/material/icon';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatGridListModule,
     MatButtonModule,ReactiveFormsModule,
-    MatCardModule,MatInputModule,MatFormFieldModule,MatToolbarModule,SlickCarouselModule,MatIconModule
+    NgbModule,MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

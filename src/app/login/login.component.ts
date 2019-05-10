@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl,Validators } from '@angular/forms';
+import { EmailValidator } from '../../validators/email';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,10 @@ import { FormBuilder, FormGroup, FormControl,Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   authForm: FormGroup;
   password:any='';
-  emailRegex :any= /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\S+\$).{4,}\$/;
+  secondseg:boolean;
+  firstseg:boolean=true;
+  //emailRegex :any= /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\S+\$).{4,}\$/;
+  emailRegex:any=/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
   constructor(private fb: FormBuilder) {
     this.createForm();
   }
@@ -17,11 +21,19 @@ export class LoginComponent implements OnInit {
 
   }
   
-
+  selectSegment(val){
+    if(val=='first'){
+     this.firstseg=true;
+     this.secondseg=false;
+    }else{
+      this.firstseg=false;
+      this.secondseg=true;
+    }
+  }
     createForm() {
       this.authForm = this.fb.group({
-        'email': [' ', [Validators.required,Validators.pattern(this.emailRegex)] ],
-        'password': [' ',Validators.required ]
+        'email': ['', [Validators.required,Validators.pattern(this.emailRegex)] ],
+        'password': ['',Validators.required ]
       });
     }
 
@@ -30,6 +42,11 @@ export class LoginComponent implements OnInit {
         if (this.authForm.valid) {
           //window.localStorage.setItem('username', value.username);
           //window.localStorage.setItem('password', value.password);    
+          if(this.firstseg){
+           console.log('Staff')
+          }else{
+            console.log('Admin')
+          }
         }else{
           console.log('cxz')
         }
