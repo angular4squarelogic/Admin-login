@@ -1,0 +1,156 @@
+<div class="row headerlayout" >
+    <div class="col-sm-6">
+<h2>Add Continent</h2>
+      </div>
+      <div class="col-sm-6" >
+         
+        </div>
+</div>
+    <div class="row cardlayout">
+        <form  style="padding:13px" [formGroup]="addcontForm" (ngSubmit)="submitForm()">
+              
+            
+            <div class="container">
+              <label for="uname" style="color:#655e5e"><b>Overview</b></label>
+              <input type="text" placeholder="Enter the overview" name="overview"  formControlName="overview">
+              <!-- <p class="validation" *ngIf="addcontForm.controls.overview.errors) && (addcontForm.controls.overview.dirty || addcontForm.controls.overview.touched)">Please enter valid overview.</p> -->
+              <label for="psw" style="color:#655e5e"><b>Description</b></label>
+              <input type="text"  placeholder="Enter the description" name="description"  formControlName="description">
+              
+            
+               
+                  <div class="example-button-row" style="text-align:center">
+                    
+                      <button mat-flat-button color="primary" [disabled]="!addcontForm.valid" type="submit">Add</button>
+                   
+                    </div>
+            
+            </div>
+          
+        
+          </form>
+        <!-- <div class="col-sm-3">
+          <mat-card class="example-card">
+            <mat-card-header>
+                <div class="row" style="width: 100%;">
+                    <div class="col-sm-6" style="color:#009da0;padding: 0">
+             Africa
+                    </div>
+                    <div class="col-sm-6" style="text-align:right;padding: 0">
+              <i class="fa fa-pencil-square-o"  style="color:#009da0;margin-right:10px" aria-hidden="true"></i>
+              <i class="fa fa-trash" style="color:#ff586b" aria-hidden="true"></i>
+              </div>
+            </div>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                The Shiba Inu is the smallest of the six original
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div class="row" style="    width: 100%;
+                padding: 0px 0px 0px 13px;">
+                    <div class="col-sm-4" >
+                        <div mat-card-avatar class="example-header-image"></div>
+                      </div>
+                      <div class="col-sm-8" >
+                          <mat-card-subtitle style="color:#009da0;">Dog Breed</mat-card-subtitle>
+                        </div>
+                      </div>
+                
+            </mat-card-actions>
+          </mat-card></div>
+        <div class="col-sm-3">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div class="row" style="width: 100%;">
+                        <div class="col-sm-6" style="color:#009da0;padding: 0">
+                 Africa
+                        </div>
+                        <div class="col-sm-6" style="text-align:right;padding: 0">
+                  <i class="fa fa-pencil-square-o"  style="color:#009da0;margin-right:10px" aria-hidden="true"></i>
+                  <i class="fa fa-trash" style="color:#ff586b" aria-hidden="true"></i>
+                  </div>
+                </div>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>
+                    The Shiba Inu is the smallest of the six original
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="row" style="    width: 100%;
+                    padding: 0px 0px 0px 13px;">
+                        <div class="col-sm-4" >
+                            <div mat-card-avatar class="example-header-image"></div>
+                          </div>
+                          <div class="col-sm-8" >
+                              <mat-card-subtitle style="color:#009da0;">Dog Breed</mat-card-subtitle>
+                            </div>
+                          </div>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+        <div class="col-sm-3">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div class="row" style="width: 100%;">
+                        <div class="col-sm-6" style="color:#009da0;padding: 0">
+                 Africa
+                        </div>
+                        <div class="col-sm-6" style="text-align:right;padding: 0">
+                  <i class="fa fa-pencil-square-o"  style="color:#009da0;margin-right:10px" aria-hidden="true"></i>
+                  <i class="fa fa-trash" style="color:#ff586b" aria-hidden="true"></i>
+                  </div>
+                </div>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>
+                    The Shiba Inu is the smallest of the six original 
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="row" style="    width: 100%;
+                    padding: 0px 0px 0px 13px;">
+                        <div class="col-sm-4" >
+                            <div mat-card-avatar class="example-header-image"></div>
+                          </div>
+                          <div class="col-sm-8" >
+                              <mat-card-subtitle style="color:#009da0;">Dog Breed</mat-card-subtitle>
+                            </div>
+                          </div>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+        <div class="col-sm-3">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div class="row" style="width: 100%;">
+                        <div class="col-sm-6" style="color:#009da0;padding: 0">
+                 Africa
+                        </div>
+                        <div class="col-sm-6" style="text-align:right;padding: 0">
+                  <i class="fa fa-pencil-square-o"  style="color:#009da0;margin-right:10px" aria-hidden="true"></i>
+                  <i class="fa fa-trash" style="color:#ff586b" aria-hidden="true"></i>
+                  </div>
+                </div>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>
+                    The Shiba Inu is the smallest of the six original 
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="row" style="    width: 100%;
+                    padding: 0px 0px 0px 13px;">
+                        <div class="col-sm-4" >
+                            <div mat-card-avatar class="example-header-image"></div>
+                          </div>
+                          <div class="col-sm-8" >
+                              <mat-card-subtitle style="color:#009da0;">Dog Breed</mat-card-subtitle>
+                            </div>
+                          </div>
+                </mat-card-actions>
+              </mat-card>
+        </div> -->
+      </div>

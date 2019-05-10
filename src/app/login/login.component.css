@@ -1,0 +1,220 @@
+.validation{
+    color: red;
+ } 
+ 
+   
+   /* Float four columns side by side */
+   .column {
+     float: left;
+     width: 54%;
+     padding: 0 10px;
+   }
+   .column1 {
+     text-align: right;
+ float:left;
+ width: 42%;
+     padding: 0 10px;
+   }
+   /* Remove extra left and right margins, due to padding */
+   .row {margin: 0 -5px;}
+   
+   /* Clear floats after the columns */
+   .row:after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+   .paddclass{
+     padding: 0px 42px 0px 46px;
+   }
+   /* Responsive columns */
+   @media screen and (max-width: 600px) {
+     .column {
+       width: 100%;
+       display: block;
+       margin-bottom: 20px;
+       
+     }
+     .paddclass{
+         padding:0px;
+       }
+   }
+   @media only screen and (max-width: 768px) {
+     /* For mobile phones: */
+     .column1 {
+         text-align: right;
+     float:left;
+         width: 100%;
+         padding: 0 10px;
+       }
+   }
+   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+     .column {
+         float: left;
+         width: 100%;
+         padding: 0 10px;
+       }
+     .column1 {
+         margin-top: 12px;
+         text-align: right;
+     float:left;
+         width: 100%;
+         padding: 0 10px;
+       }
+ }
+   /* Style the counter cards */
+   .card {
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     padding: 16px;
+  
+     background-color: #f1f1f1;
+   }
+   .card1 {
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     padding: 16px;
+    
+    
+   }
+   .cardleft {
+  
+     padding: 16px;
+  
+    
+   }
+   .cardright { 
+     padding: 16px;
+    
+   }
+ 
+   form {border: 3px solid #f1f1f1;padding:58px;}
+   input:focus ~ .floating-label,
+   input:not(:focus):valid ~ .floating-label{
+     top: 8px;
+     bottom: 10px;
+     left: 20px;
+     font-size: 11px;
+     opacity: 1;
+   }
+   
+   .inputText {
+     font-size: 14px;
+     width: 200px;
+     height: 35px;
+   }
+   
+   .floating-label {
+     position: absolute;
+     pointer-events: none;
+     left: 20px;
+     top: 18px;
+     transition: 0.2s ease all;
+   }
+ input[type=text], input[type=password] {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   background: transparent;
+     border: none;
+     border-bottom: 1px solid #ccc;
+   box-sizing: border-box;
+ }
+
+ button {
+   background-color: #4CAF50;
+   color: white;
+ }
+ 
+ button:hover {
+   opacity: 0.8;
+ }
+ 
+ .cancelbtn {
+   width: auto;
+   padding: 10px 18px;
+   background-color: #f44336;
+ }
+ 
+ .imgcontainer {
+   text-align: center;
+   margin: 24px 0 12px 0;
+ }
+ 
+ img.avatar {
+   width: 40%;
+   border-radius: 50%;
+ }
+ 
+ .container {
+   padding: 15px 16px 16px 16px;
+ }
+ 
+ span.psw {
+   float: right;
+   padding-top: 16px;
+ }
+ 
+ /* Change styles for span and cancel button on extra small screens */
+ @media screen and (max-width: 300px) {
+   span.psw {
+      display: block;
+      float: none;
+   }
+   .cancelbtn {
+      width: 100%;
+   }
+ }
+ 
+ .form-group {
+     position: relative;
+     margin-bottom: 1.5rem;
+   }
+   
+   .form-control-placeholder {
+     position: absolute;
+     top: 0;
+     padding: 7px 0 0 13px;
+     transition: all 200ms;
+     opacity: 0.5;
+   }
+   
+   .form-control:focus + .form-control-placeholder,
+   .form-control:valid + .form-control-placeholder {
+     font-size: 75%;
+     transform: translate3d(0, -100%, 0);
+     opacity: 1;
+   }
+   .segmented-control {
+     
+     text-align:center;
+   }
+ 
+   
+   .segmented-control label {
+     border-top: 1px solid darkgrey;
+     border-bottom: 1px solid darkgrey;
+     padding: 2px 30px;
+    
+    
+   }
+   .unselectseg{
+     color: darkgrey;
+   }
+   .segmentcolor{
+     background: #C8C8C8;
+     color:#655e5e;
+   }
+   
+   .sc-label:first-of-type {
+     border-left: 1px solid darkgrey;
+     border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
+     border-right: 1px solid darkgrey;
+   }
+   
+   .sc-label:last-of-type {
+     border-right: 1px solid darkgrey;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
+     border-left: 1px solid darkgrey;
+   }
